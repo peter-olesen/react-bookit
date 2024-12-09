@@ -1,0 +1,17 @@
+@use "../../style/variables" as *;
+@use "../../style/placeholders";
+
+.Toolbar {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  font-size: 24px;
+  font-weight: 200;
+  color: #00000080;
+
+  img {
+    max-width: 32px;
+    max-height: 32px;
+    opacity: 0.45;
+  }
+}

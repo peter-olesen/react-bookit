@@ -1,0 +1,9 @@
+@use "../../style/variables" as *;
+@use "../../style/placeholders";
+
+h1 {
+  @extend %RobotoFlex;
+  font-size: 40px;
+  font-weight: 100;
+  color: #000000bf;
+}

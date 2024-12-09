@@ -1,0 +1,30 @@
+@use "./style/variables" as *;
+@use "./style/placeholders";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  @extend %RobotoFlex;
+  background: $BG;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+
+    .outlet {
+      margin-top: 2rem;
+    }
+  }
+
+  a {
+    color: $Black;
+    text-decoration: none;
+  }
+}

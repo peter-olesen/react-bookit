@@ -1,0 +1,66 @@
+@use "../../style/variables" as *;
+@use "../../style/placeholders";
+
+.Events {
+  h2 {
+    font-size: 32px;
+    font-weight: 100;
+    color: #000000bf;
+  }
+  .SingleEvent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid #0000001a;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 12px 1px #0000001a;
+    height: 86px;
+
+    .EventInfo {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 2rem;
+      padding: 2rem;
+
+      p {
+        color: #000000bf;
+        font-size: 16px;
+        font-weight: 300;
+        border-right: 1px solid #00000026;
+        padding-right: 2rem;
+      }
+    }
+
+    .EventEdit {
+      display: flex;
+      align-items: center;
+      margin-right: 2rem;
+      gap: 1rem;
+
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 28px;
+          height: 28px;
+          opacity: 0.45;
+        }
+      }
+
+      .Edit {
+        border-radius: 0.5rem;
+        background: $Blue;
+        border: 1px solid #0000000d;
+      }
+
+      .Trash {
+        border-radius: 0.5rem;
+        background: $Pink;
+        border: 1px solid #0000000d;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+
+  .topContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+
+    h2 {
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
