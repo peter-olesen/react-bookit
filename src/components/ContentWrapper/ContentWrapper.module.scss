@@ -1,0 +1,59 @@
+@use "../../style/variables" as *;
+@use "../../style/placeholders";
+
+.ContentWrapper {
+  background: $Grey;
+  border: 1px solid #0000001a;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 12px 1px #0000001a;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 2rem;
+
+  section {
+    padding: 3rem 5rem;
+    color: #000000a6;
+
+    a {
+      color: #000000a6;
+    }
+
+    h2 {
+      font-size: 36px;
+      font-weight: 100;
+      color: #000000a6;
+      margin: 0;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-size: 14px;
+        font-weight: 100;
+        margin-top: 0.5rem;
+      }
+
+      input {
+        background: #f8f8f840;
+        border: 1px solid #41414140;
+        border-radius: 4px;
+      }
+
+      input[type="button"] {
+        background: #c9e4de;
+        border: 1px solid #ffffff40;
+        padding: 0.5rem 2rem;
+        margin-top: 1rem;
+      }
+
+      div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: end;
+      }
+    }
+  }
+}

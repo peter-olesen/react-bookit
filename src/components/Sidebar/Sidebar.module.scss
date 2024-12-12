@@ -2,7 +2,7 @@
 @use "../../style/placeholders";
 
 .Sidebar {
-  width: 10vw;
+  transition: width 0.3s ease;
   height: 100vh;
   overflow: hidden;
   padding-top: 2rem;
@@ -12,13 +12,25 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #00000073;
+  font-size: 16px;
+  font-weight: 300;
 
   .Menu {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    width: 100%;
+
+    .MenuItem {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      cursor: pointer;
+      width: 100%;
+      color: #00000073;
+    }
   }
 
   img {
@@ -29,12 +41,22 @@
 
   hr {
     border: 1px solid #00000040;
-    width: 75%;
+    width: 100%;
   }
 
   .Account {
     position: absolute;
     bottom: 0;
     margin-bottom: 1rem;
+
+    .MenuItem {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      cursor: pointer;
+      width: 100%;
+      color: #00000073;
+    }
   }
 }
