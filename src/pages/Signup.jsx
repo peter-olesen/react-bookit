@@ -1,4 +1,8 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { ContentWrapper } from "../components/ContentWrapper/ContentWrapper";
+import { Divider } from "../components/Divider/Divider";
+import { PageHeader } from "../components/PageHeader/PageHeader";
 
 export const Signup = () => {
   const [formData, setFormData] = useState({
@@ -40,51 +44,68 @@ export const Signup = () => {
 
   return (
     <>
-      <h2>Sign up</h2>
-      <form onSubmit={handleSignup} method="post">
-        <label htmlFor="name">Name</label>
-        <input
-          type="text"
-          name="name"
-          id="name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
+      <PageHeader title="Sign up" />
+      <ContentWrapper>
+        <h2>Welcome</h2>
+        <Divider />
+        <p>
+          We are thrilled to have on board. Now we just need to get to know you
+          a little
+        </p>
+        <form onSubmit={handleSignup} method="post">
+          <label htmlFor="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
 
-        <label htmlFor="email">Email</label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
 
-        <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          name="password"
-          id="password"
-          value={formData.password}
-          onChange={handleChange}
-          pattern=".{6,}"
-          required
-        />
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            value={formData.password}
+            onChange={handleChange}
+            pattern=".{6,}"
+            required
+          />
 
-        <label htmlFor="phoneNumber">Phone</label>
-        <input
-          type="tel"
-          name="phoneNumber"
-          id="phoneNumber"
-          value={formData.phoneNumber}
-          onChange={handleChange}
-          required
-        />
+          <label htmlFor="phoneNumber">Phone</label>
+          <input
+            type="tel"
+            name="phoneNumber"
+            id="phoneNumber"
+            value={formData.phoneNumber}
+            onChange={handleChange}
+            required
+          />
 
-        <input type="submit" value="Sign up" />
-      </form>
+          <div>
+            <span>
+              Already have an account?{" "}
+              <NavLink to="/signin" style={{ textDecoration: "underline" }}>
+                Click here
+              </NavLink>{" "}
+              to sign in
+            </span>
+            <input type="submit" value="Sign in" />
+          </div>
+        </form>
+      </ContentWrapper>
     </>
   );
 };

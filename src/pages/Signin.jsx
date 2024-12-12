@@ -6,7 +6,7 @@ import { PageHeader } from "../components/PageHeader/PageHeader";
 export const Signin = () => {
   return (
     <>
-      <PageHeader />
+      <PageHeader title="Sign in" />
       <ContentWrapper>
         <h2>Welcome</h2>
         <Divider />
@@ -24,7 +24,7 @@ export const Signin = () => {
               </NavLink>{" "}
               to sign up
             </span>
-            <input type="button" value="Sign in" />
+            <input type="submit" value="Sign in" />
           </div>
         </form>
       </ContentWrapper>

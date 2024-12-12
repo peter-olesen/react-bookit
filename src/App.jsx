@@ -1,9 +1,18 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { UserProvider } from "./contexts/UserContext";
+
 import { MainLayout } from "./layouts/MainLayout";
+
 import { Home } from "./pages/Home";
-import { Signin } from "./pages/Signin";
+
+import { AddEvent } from "./pages/AddEvent";
+import { EditEvent } from "./pages/EditEvent";
+
+import { Settings } from "./pages/Settings";
+import { Account } from "./pages/Account";
+
 import { Signup } from "./pages/Signup";
+import { Signin } from "./pages/Signin";
 
 function App() {
   return (
@@ -13,12 +22,18 @@ function App() {
           <Routes>
             <Route path={"/"} element={<MainLayout />}>
               <Route index element={<Home />} />
-              <Route path={"/add"} element={<Home />} />
-              <Route path={"/settings"} element={<Home />} />
-              <Route path={"/account"} element={<Home />} />
-              <Route path={"/add"} element={<Home />} />
-              <Route path={"/signin"} element={<Signin />} />
+
+              {/* Add Event / Edit Event */}
+              <Route path={"/add"} element={<AddEvent />} />
+              <Route path={"/edit"} element={<EditEvent />} />
+
+              {/* Settings / Account */}
+              <Route path={"/settings"} element={<Settings />} />
+              <Route path={"/account"} element={<Account />} />
+
+              {/* Sign up/Sign in */}
               <Route path={"/signup"} element={<Signup />} />
+              <Route path={"/signin"} element={<Signin />} />
             </Route>
           </Routes>
         </UserProvider>

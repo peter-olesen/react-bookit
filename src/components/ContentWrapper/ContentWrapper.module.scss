@@ -35,13 +35,16 @@
         margin-top: 0.5rem;
       }
 
-      input {
+      input,
+      textarea {
         background: #f8f8f840;
         border: 1px solid #41414140;
         border-radius: 4px;
+        max-width: 100%;
       }
 
-      input[type="button"] {
+      input[type="submit"] {
+        color: #000000bf;
         background: #c9e4de;
         border: 1px solid #ffffff40;
         padding: 0.5rem 2rem;
